@@ -136,7 +136,55 @@ public class MissionReader {
     }
 
     private Mission readTxt(File file) throws Exception {
+        private Mission readTxt(File file) throws Exception {
         Mission mission = new Mission();
+        Map<String, String> flat = new LinkedHashMap<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                line = line.trim();
+                if (line.isEmpty()) continue;
+                int sep = line.indexOf(':');
+                if (sep == -1) continue;
+                String key = line.substring(0, sep).trim();
+                String value = line.substring(sep + 1).trim();
+                flat.put(key, value);
+            }
+        }
+    
+        mission.setMissionId(flat.get("missionId"));
+        mission.setDate(flat.get("date"));
+        mission.setLocation(flat.get("location"));
+        mission.setOutcome(flat.get("outcome"));
+        mission.setDamageCost(Integer.parseInt(flat.get("damageCost")));
+        mission.setCurse(flat.get("curse.name"), flat.get("curse.threatLevel"));
+        mission.setComment(flat.getOrDefault("comment", ""));
+    
+        List<Sorcerer> sorcerers = new ArrayList<>();
+        int i = 0;
+        while (flat.containsKey("sorcerer[" + i + "].name")) {
+            String name = flat.get("sorcerer[" + i + "].name");
+            String rank = flat.get("sorcerer[" + i + "].rank");
+            sorcerers.add(new Sorcerer(name, rank));
+            i++;
+        }
+        mission.setSorcerers(sorcerers);
+    
+        List<Technique> techniques = new ArrayList<>();
+        int j = 0;
+        while (flat.containsKey("technique[" + j + "].name")) {
+            Technique tech = new Technique(
+                    flat.get("technique[" + j + "].name"),
+                    flat.get("technique[" + j + "].type"),
+                    flat.get("technique[" + j + "].owner"),
+                    Integer.parseInt(flat.get("technique[" + j + "].damage"))
+            );
+            techniques.add(tech);
+            j++;
+        }
+        mission.setTechniques(techniques);
+    
         return mission;
     }
 }
