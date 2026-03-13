@@ -6,7 +6,7 @@ public class Curse {
 
     public Curse(String name, String threatLevel) {
         this.name = name;
-        this.threatLevel = name;
+        this.threatLevel = threatLevel;
     }
 
     public String getName() {
@@ -21,5 +21,10 @@ public class Curse {
     }
     public void setThreatLevel(String threatLevel) {
         this.threatLevel = threatLevel;
+    }
+
+    @Override
+    public String toString() {
+        return name + " (угроза: " + threatLevel + ")";
     }
 }
