@@ -22,4 +22,9 @@ public class Sorcerer {
     public void setRank(String rank) {
         this.rank = rank;
     }
+
+    @Override
+    public String toString() {
+        return name + " [" + rank + "]";
+    }
 }
