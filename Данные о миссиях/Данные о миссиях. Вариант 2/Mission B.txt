@@ -1,0 +1,23 @@
+missionId: M-2024-042
+date: 2024-11-03
+location: Токио, заброшенный госпиталь
+outcome: FAILURE
+damageCost: 8500000
+
+curse.name: Рёмен Сукуна (фрагмент)
+curse.threatLevel: SPECIAL_GRADE
+
+sorcerer[0].name: Годзё Сатору
+sorcerer[0].rank: SPECIAL_GRADE
+
+technique[0].name: Бесконечность
+technique[0].type: INNATE
+technique[0].owner: Годзё Сатору
+technique[0].damage: 1200000
+
+technique[1].name: Пурпурный
+technique[1].type: INNATE
+technique[1].owner: Годзё Сатору
+technique[1].damage: 3000000
+
+note: Проклятие не уничтожено. Территория признана непригодной.

@@ -1,0 +1,36 @@
+<mission>
+    <missionId>M-2024-042</missionId>
+    <date>2024-11-03</date>
+    <location>Токио, заброшенный госпиталь</location>
+    <outcome>FAILURE</outcome>
+    <damageCost>8500000</damageCost>
+
+    <curse>
+        <name>Рёмен Сукуна (фрагмент)</name>
+        <threatLevel>SPECIAL_GRADE</threatLevel>
+    </curse>
+
+    <sorcerers>
+        <sorcerer>
+            <name>Годзё Сатору</name>
+            <rank>SPECIAL_GRADE</rank>
+        </sorcerer>
+    </sorcerers>
+
+    <techniques>
+        <technique>
+            <name>Бесконечность</name>
+            <type>INNATE</type>
+            <owner>Годзё Сатору</owner>
+            <damage>1200000</damage>
+        </technique>
+        <technique>
+            <name>Пурпурный</name>
+            <type>INNATE</type>
+            <owner>Годзё Сатору</owner>
+            <damage>3000000</damage>
+        </technique>
+    </techniques>
+
+    <comment>Проклятие Special Grade не уничтожено. Объект подлежит изоляции.</comment>
+</mission>

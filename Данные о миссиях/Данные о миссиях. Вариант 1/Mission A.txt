@@ -1,0 +1,24 @@
+missionId: M-2024-017
+date: 2024-10-12
+location: Токио, район Сибуя
+outcome: SUCCESS
+damageCost: 1200000
+
+curse.name: Проклятие подземного перехода
+curse.threatLevel: HIGH
+
+sorcerer[0].name: Итадори Юдзи
+sorcerer[0].rank: GRADE_1
+
+sorcerer[1].name: Фушигуро Мэгуми
+sorcerer[1].rank: GRADE_2
+
+technique[0].name: Черная вспышка
+technique[0].type: INNATE
+technique[0].owner: Итадори Юдзи
+technique[0].damage: 500000
+
+technique[1].name: Техника десяти теней
+technique[1].type: SHIKIGAMI
+technique[1].owner: Фушигуро Мэгуми
+technique[1].damage: 700000

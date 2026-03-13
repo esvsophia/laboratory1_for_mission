@@ -1,0 +1,19 @@
+{
+  "missionId": "M-2024-042",
+  "date": "2024-11-03",
+  "location": "Токио, заброшенный госпиталь",
+  "outcome": "FAILURE",
+  "damageCost": 8500000,
+  "curse": {
+    "name": "Рёмен Сукуна (фрагмент)",
+    "threatLevel": "SPECIAL_GRADE"
+  },
+  "sorcerers": [
+    { "name": "Годзё Сатору", "rank": "SPECIAL_GRADE" }
+  ],
+  "techniques": [
+    { "name": "Бесконечность", "type": "INNATE", "owner": "Годзё Сатору", "damage": 1200000 },
+    { "name": "Пурпурный", "type": "INNATE", "owner": "Годзё Сатору", "damage": 3000000 }
+  ],
+  "comment": "Экзорцизм не завершен. Требуется пересмотр протоколов для Special Grade."
+}
