@@ -158,7 +158,7 @@ public class MissionReader {
         mission.setOutcome(flat.get("outcome"));
         mission.setDamageCost(Integer.parseInt(flat.get("damageCost")));
         mission.setCurse(flat.get("curse.name"), flat.get("curse.threatLevel"));
-        mission.setComment(flat.getOrDefault("comment", ""));
+        mission.setComment(flat.getOrDefault("note", ""));
     
         List<Sorcerer> sorcerers = new ArrayList<>();
         int i = 0;
