@@ -27,9 +27,8 @@ public class Mission {
 
     public void setMissionId(String missionId) { this.missionId = missionId; }
     public void setOutcome(String outcome) { this.outcome = outcome; }
-    public void setCurse(String name, String threatLevel) {
-        curse.setName(name);
-        curse.setThreatLevel(threatLevel);}
+    public void setCurse(String name, String threatLevel) { this.curse = new Curse(name, threatLevel); }
+
     public void setSorcerers(List<Sorcerer> sorcerers) { this.sorcerers = sorcerers; }
     public void setTechniques(List<Technique> techniques) { this.techniques = techniques; }
     public void setComment(String comment) { this.comment = comment; }
