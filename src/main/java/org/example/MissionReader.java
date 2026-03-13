@@ -136,7 +136,6 @@ public class MissionReader {
     }
 
     private Mission readTxt(File file) throws Exception {
-        private Mission readTxt(File file) throws Exception {
         Mission mission = new Mission();
         Map<String, String> flat = new LinkedHashMap<>();
 
