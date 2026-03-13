@@ -137,7 +137,7 @@ public class MissionReader {
 
     private Mission readTxt(File file) throws Exception {
         Mission mission = new Mission();
-        Map<String, String> flat = new LinkedHashMap<>();
+        Map<String, String> flat = new HashMap<>();
 
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String line;
